@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Build Your Resume</h1>
+        </header>
+        <main>
+            <form id="resume-form">
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div>
+                    <label for="experience">Work Experience:</label>
+                    <textarea id="experience" placeholder="Enter your work experience"></textarea>
+                </div>
+                <div>
+                    <label for="education">Education:</label>
+                    <textarea id="education" placeholder="Enter your education"></textarea>
+                </div>
+                <div>
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills" placeholder="Enter your skills (comma separated)" required>
+                </div>
+                <button type="submit" class="save-btn">Save Resume</button>
+            </form>
+
+            <div id="resume-preview">
+                <h3>Resume Preview</h3>
+                <div id="preview"></div>
+            </div>
+
+            <button id="download-btn" class="save-btn">Download Resume as PDF</button>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
